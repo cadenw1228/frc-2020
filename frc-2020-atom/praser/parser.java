@@ -19,7 +19,7 @@ public class parser{
             //user input bs
             String userInput;
             Scanner obj = new Scanner(System.in);
-
+            System.out.print("bitch");
             try{
                   //dont know but needed
                   DocumentBuilder builder = factory.newDocumentBuilder();
@@ -53,8 +53,8 @@ public class parser{
                                     NodeList userList = eElement.getChildNodes();
                                     //testing reasons dont know if method still works
                                     //grabs all nodes useing for loop and prints them
-                                    System.out.print(userList.getLength());
-                                    system.out.print(idkList.getLenght());
+                                    //System.out.print(userList.getLength());
+                                    //System.out.print(idkList.getLenght());
                                     for(int j = 0;j < userList.getLength()/idkList.getLength();j++){
                                           //agian grab spefic node, show text, print, rinse and reapet
                                           //Node nNode2 = userList.item(j);
