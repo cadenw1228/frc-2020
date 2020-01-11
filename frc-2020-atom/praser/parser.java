@@ -29,7 +29,7 @@ public class parser{
                   //dont know agian but need
                   doc.getDocumentElement().normalize();
                   //idk
-                  String tagName = doc.getDocumentElement().getNodeName();
+                  //String tagName = doc.getDocumentElement().getNodeName();
                   //grabs a list of nodes like <food> and puts in list
                   NodeList idkList = doc.getElementsByTagName("food");
                   //more user input bs
@@ -45,7 +45,7 @@ public class parser{
                               //grab node <name> and checks its text contents ex:Strawberry Belgian Waffles
                               String nameCheck = eElement.getElementsByTagName("name").item(0).getTextContent();
                               //node name of Element like <name> or <price>
-                              String nodeName = eElement.getNodeName();
+                              //String nodeName = eElement.getNodeName();
                               //System.out.print(nodeName);
 
                               if(nameCheck.equals(userInput)){
