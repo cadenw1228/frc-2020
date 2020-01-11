@@ -10,6 +10,7 @@ import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 import java.io.File;
 import org.w3c.dom.Node;
+import java.util.*;
 public class parser{
 
       public static void main(String [] args){
@@ -31,14 +32,13 @@ public class parser{
                   //idk
                   //String tagName = doc.getDocumentElement().getNodeName();
                   //grabs a list of nodes like <food> and puts in list
-                  NodeList idkList = doc.getElementsByTagName("food");
+                  NodeList idkList; //= doc.getElementsByTagName("food");
                   //more user input bs
                   System.out.print("what type of whafles do you want\n");
                   userInput = obj.nextLine();
                   //System.out.print(userInput);
-
-                  for(int i = 0; i < idkList.getLength(); i++){
-                        //specfic node in list going down, location determined by i
+                  for(Node myNode : idkList(doc.getElementsByTagName("food"))){
+                        System.out.print(myNode.getTextContent);
                         Node nNode = idkList.item(i);
                               //still dont know
                               Element eElement = (Element) nNode;
@@ -52,12 +52,12 @@ public class parser{
                                     //grabs all chils nodes(ex:name,price...) under Element node(food)
                                     NodeList userList = eElement.getChildNodes();
                                     //testing reasons dont know if method still works
-                                    int idk = userList.getLength()/idkList.getLength();
-                                    System.out.print("num:" + idk + "\n");
                                     //grabs all nodes useing for loop and prints them
+                                    System.out.print(userList.getLength());
+                                    system.out.print(idkList.getLenght());
                                     for(int j = 0;j < userList.getLength()/idkList.getLength();j++){
                                           //agian grab spefic node, show text, print, rinse and reapet
-                                          Node nNode2 = userList.item(j);
+                                          //Node nNode2 = userList.item(j);
                                           String textContent = nNode.getTextContent();
                                           System.out.print(textContent);
                                     }
